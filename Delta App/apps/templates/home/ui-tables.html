@@ -1,0 +1,107 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10"><b>Données Importer</b></h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="#!">Delta App</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:">Tables</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- [ Main Content ] start -->
+                <div class="row">
+
+                    <!-- [ stiped-table ] start -->
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row"> 
+                                    <div class="col">
+                                        <br>
+                                        <h5><b>Base de donnees</b></h5>
+                                    </div>
+                                    <div class="text-end"> 
+                                        <a href="/classifier" class="btn btn-info btn-lg" target="_blank" rel="noopener noreferrer">
+                                            <b> Classifier </b> 
+                                        </a>
+                                        </div>
+                                </div>                          
+                                <!-- <span class="d-block m-t-5">use class <code>table-striped</code> inside table element</span> -->
+                                
+                            </div>
+                            <div class="card-block table-border-style">
+                                <div class="table-responsive text-nowrap">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>                                                
+                                                
+                                                <th><b>Libele de chapitre</b></th> 
+                                                <th><b>libelle de SSCHAP</b></th>
+                                                <th><b>C_PART</b></th>
+                                                <th><b>C_ART</b></th>
+                                                <th><b>C_PGPH</b></th>
+                                                <th><b>DOTATION</b></th>
+                                                <th><b>INDISPONIBLE</b></th>
+                                                <th><b>Indisp</b></th>
+                                                <th><b>DISPONIBLE</b></th>  
+                                                <th><b>libelle des operation</b></th>                                             
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for w in data_liste %}
+                                                <tr>                                        
+                                                    
+                                                    <td>{{ w.lib_chap }}</td>
+                                                    <td>{{ w.Libellé_SSCHAP }}</td>
+                                                    <td>{{ w.C_PART }}</td>
+                                                    <td>{{ w.C_ART }}</td>
+                                                    <td>{{ w.C_PGPH }}</td>
+                                                    <td>{{ w.DOTATION }}</td>
+                                                    <td>{{ w.INDISPONIBLE }}</td>
+                                                    <td>{{ w.Indisp }}</td>
+                                                    <td>{{ w.DISPONIBLE }}</td>
+                                                    <td>{{ w.LIBELLE }}</td>
+
+                                                    
+                                                </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ stiped-table ] end -->
+                </div>
+                <!-- [ Main Content ] end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

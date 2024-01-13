@@ -1,0 +1,105 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h5 class="m-b-10">Classification de Données</h5>
+                        </div>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+                            <li class="breadcrumb-item"><a href="javascript:">Delta App</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:">table classification</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+        
+        <div class="main-body">
+            <div class="page-wrapper">
+                <!-- [ Main Content ] start -->
+                <div class="row">
+
+                    <!-- [ stiped-table ] start -->
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row"> 
+                                    <br>
+                                    <div class="col">
+                                        <h5><b>Classification</b></h5>
+                                    </div>
+
+                                    <div class="text-end"> 
+                                        <i class="bi bi-filetype-xlsx"></i>
+                                        <button type="button" class="btn btn-info btn-lg" onclick="ExportToExcel('xlsx', 'Classification')">
+                                            Exporter
+                                            
+                                        </button>
+                                    </div>
+
+                                    
+                                </div>                          
+                                <!-- <span class="d-block m-t-5">use class <code>table-striped</code> inside table element</span> -->
+                                <br>
+
+                            </div>
+                            <div class="card-block table-border-style">
+                                <div class="table-responsive text-nowrap">
+                                    <table class="table table-striped" id="table">
+                                        <thead>
+                                            <tr>   
+                                                <th>Libele de chapitre</th>
+                                                <th>libelle des operation</th>
+                                                <th>EPI/EPAC</th>
+                                                <th>Secteur</th>
+                                                <th>Branche</th>
+                                                <th>Operation</th>
+                                                <th>SI</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for w in class_list %}
+                                                <tr>
+                                                    
+                                                    <td>{{ w.lib_chap }}</td>
+                                                    <td>{{ w.LIBELLE }}</td>
+                                                    <td>{{ w.Epi_Epac }}</td>
+                                                    <td>{{ w.Secteur }}</td>
+                                                    <td>{{ w.Branche }}</td>
+                                                    <td>{{ w.Operation }}</td>
+                                                    <td>{{ w.Si }}</td>                                                   
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [ stiped-table ] end -->
+                </div>
+                <!-- [ Main Content ] end -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
