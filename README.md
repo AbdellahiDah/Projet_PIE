@@ -6,7 +6,7 @@ Ce projet a impliqué la conception et la mise en place d'un système d'automati
  - Intégrer les modèles dans une application Web avec une interface utilisateur simple et un tableau de bord dynamique qui offre des statistiques clés et des résultats d'analyse, permettant aux clients de disposer de prévisions pour répondre à leurs besoins.
 
 
-App : 
+### App : 
 ![image](https://github.com/AbdellahiDah/Projet_PIE/assets/99772783/5f085d6e-00fb-425c-97a6-a0c64e45f3f7)
 ![image](https://github.com/AbdellahiDah/Projet_PIE/assets/99772783/bc2a049b-fe2e-4158-a285-400519daee7f)
 ![image](https://github.com/AbdellahiDah/Projet_PIE/assets/99772783/0f834be2-e01a-4ea4-978b-a63bfdf58e15)
