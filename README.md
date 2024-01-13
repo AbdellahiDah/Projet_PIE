@@ -1,3 +1,5 @@
+# Projet_PIE
+Développement et mise en place d'un système d'automatisation pour le traitement et la classification des données budgétaires de l'État mauritanien en utilisant l'IA.
 
 Ce projet a impliqué la conception et la mise en place d'un système d'automatisation du traitement et de la classification de données budgétaire de l'État mauritanien à l'aide de l'apprentissage automatique.
 
